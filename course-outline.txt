@@ -1,0 +1,13 @@
+Backend
+- Virtual Environtment
+- Flask
+- Basic Routing
+- Request API
+
+Frontend
+- Typescript
+- Use Effect
+- Use State
+- Custom Hooks
+- Axios
+- Emotion JS
