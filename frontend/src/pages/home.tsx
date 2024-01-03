@@ -12,7 +12,7 @@ export default function HomePage() {
   const handleChangeSearch = (e: ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value as string);
   };
-  console.log(search);
+  
   const filteredUsers = users.filter(
     (user) => user.Name.includes(search) || user.Username.includes(search)
   );

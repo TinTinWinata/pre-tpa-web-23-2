@@ -9,3 +9,7 @@ a {
   color: inherit;
   outline: none;
 }
+
+button {
+  padding: 0;
+}

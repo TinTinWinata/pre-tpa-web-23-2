@@ -1,24 +1,41 @@
 Backend :
 - Flaskk
-- Venv
-- Post Method
-- Get Method
+- Method (GET, POST)
 - Requests
+- Simple Data Manipulation
 
 
 ReactJS
 - Introduction
-- Use State
-- Use Effect
-- React Fragment
+- Page Structures
+
 - React Router V6
-- Custom Hooks
-- Axios
+  -> components
+  -> contexts
+  -> hooks
+  -> interfaces
+  -> middlewares
+  -> pags
+  -> settings
+  -> styled
+  -> styles
+  -> tempaltes
+
 - EmotionJS
 
+- Basic Fundamental React (Tutorial Page)
+
+- React Fragment
+- Use State
+- Use Effect
+
+- Axios
+- Custom Hooks
 
 npm i @emotion/react
 npm i @emotion/babel-plugin --save-dev
 
 https://reactrouter.com/en/main
 npm i react-router-dom
+
+https://dev.to/glocore/configure-emotion-with-your-vite-react-project-7jl

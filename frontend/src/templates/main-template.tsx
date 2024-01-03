@@ -35,6 +35,9 @@ export default function MainTemplate({ children }: { children: JSX.Element }) {
           justify-content: center;
           display: flex;
           align-item: center;
+          min-height: 100vh;
+          background-color: ${currTheme.primary};
+          color: ${currTheme.secondary};
         `}
       >
         <div
@@ -44,8 +47,6 @@ export default function MainTemplate({ children }: { children: JSX.Element }) {
             align-items: center;
             flex-direction: column;
             width: 100%;
-            background-color: ${currTheme.primary};
-            color: ${currTheme.secondary};
           `}
         >
           <div

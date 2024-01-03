@@ -11,7 +11,7 @@ export interface IMenu {
 export const MENU_LIST: IMenu[] = [
   {
     name: 'Home',
-    path: '/',
+    path: '/home',
     element: <HomePage />,
   },
   {
