@@ -1,13 +1,24 @@
-Backend
-- Virtual Environtment
-- Flask
-- Basic Routing
-- Request API
+Backend :
+- Flaskk
+- Venv
+- Post Method
+- Get Method
+- Requests
 
-Frontend
-- Typescript
-- Use Effect
+
+ReactJS
+- Introduction
 - Use State
+- Use Effect
+- React Fragment
+- React Router V6
 - Custom Hooks
 - Axios
-- Emotion JS
+- EmotionJS
+
+
+npm i @emotion/react
+npm i @emotion/babel-plugin --save-dev
+
+https://reactrouter.com/en/main
+npm i react-router-dom

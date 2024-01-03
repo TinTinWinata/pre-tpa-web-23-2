@@ -1,21 +1,17 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import HomePage from './pages/home';
-import LoginPage from './pages/login';
+import { IMenu, MENU_LIST } from './settings/menu-setting';
 import './styles/global.css';
 import MainTemplate from './templates/main-template';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <MainTemplate>
-        <Routes>
-          <Route path="/" element={<HomePage />}></Route>
-          <Route path="/home" element={<HomePage />}></Route>
-          <Route path="/login" element={<LoginPage />}></Route>
-        </Routes>
-      </MainTemplate>
-    </BrowserRouter>
-  </React.StrictMode>
+  <BrowserRouter>
+    <MainTemplate>
+      <Routes>
+        {MENU_LIST.map((menu: IMenu, key: number) => (
+          <Route key={key} element={menu.element} path={menu.path}></Route>
+        ))}
+      </Routes>
+    </MainTemplate>
+  </BrowserRouter>
 );

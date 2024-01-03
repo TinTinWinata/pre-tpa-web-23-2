@@ -1,13 +1,14 @@
-import { css } from '@emotion/react/dist/emotion-react.cjs.d.mts';
-import { Fragment } from 'react';
+import { ThemeProvider, css } from '@emotion/react';
+import { useState } from 'react';
+import { FaRegLightbulb } from 'react-icons/fa';
 import NavBar from '../components/navbar';
 
-type Theme = {
+export interface ITheme {
   secondary: string;
   primary: string;
-};
+}
 
-const themes: Theme[] = [
+const themes: ITheme[] = [
   {
     primary: 'black',
     secondary: 'white',
@@ -19,11 +20,54 @@ const themes: Theme[] = [
 ];
 
 export default function MainTemplate({ children }: { children: JSX.Element }) {
-  const currTheme = themes[0];
+  const [currThemeIdx, setCurrThemeIdx] = useState(1);
+
+  const changeTheme = () => {
+    setCurrThemeIdx((prev) => (prev === themes.length - 1 ? 0 : prev + 1));
+  };
+  const currTheme = themes[currThemeIdx];
+
   return (
-    <Fragment>
-      <NavBar />
-      <div className={css``}>{children}</div>
-    </Fragment>
+    <ThemeProvider theme={currTheme}>
+      <div
+        css={css`
+          width: 100%;
+          justify-content: center;
+          display: flex;
+          align-item: center;
+        `}
+      >
+        <div
+          css={css`
+            max-width: 1024px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            background-color: ${currTheme.primary};
+            color: ${currTheme.secondary};
+          `}
+        >
+          <div
+            css={css`
+              cursor: pointer;
+              padding: 15px 0px;
+            `}
+            onClick={changeTheme}
+          >
+            <FaRegLightbulb />
+          </div>
+          <NavBar />
+          <div
+            css={css`
+              margin: 20px;
+              width: 100%;
+            `}
+          >
+            {children}
+          </div>
+        </div>
+      </div>
+    </ThemeProvider>
   );
 }
