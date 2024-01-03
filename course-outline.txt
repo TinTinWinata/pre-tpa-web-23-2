@@ -1,11 +1,4 @@
-Backend :
-- Flaskk
-- Method (GET, POST)
-- Requests
-- Simple Data Manipulation
-
-
-ReactJS
+Frontend (ReactJS)
 - Introduction
 - Page Structures
 
@@ -19,7 +12,7 @@ ReactJS
   -> settings
   -> styled
   -> styles
-  -> tempaltes
+  -> templates
 
 - EmotionJS
 
@@ -31,6 +24,12 @@ ReactJS
 
 - Axios
 - Custom Hooks
+
+Backend :
+- Flaskk
+- Method (GET, POST)
+- Requests
+- Simple Data Manipulation
 
 npm i @emotion/react
 npm i @emotion/babel-plugin --save-dev
