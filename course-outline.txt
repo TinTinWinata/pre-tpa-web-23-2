@@ -1,7 +1,6 @@
 Frontend (ReactJS)
 - Introduction
 - Page Structures
-
 - React Router V6
   -> components
   -> contexts
@@ -13,15 +12,11 @@ Frontend (ReactJS)
   -> styled
   -> styles
   -> templates
-
 - EmotionJS
-
 - Basic Fundamental React (Tutorial Page)
-
 - React Fragment
 - Use State
 - Use Effect
-
 - Axios
 - Custom Hooks
 
@@ -31,10 +26,9 @@ Backend :
 - Requests
 - Simple Data Manipulation
 
-npm i @emotion/react
-npm i @emotion/babel-plugin --save-dev
-
-https://reactrouter.com/en/main
-npm i react-router-dom
-
-https://dev.to/glocore/configure-emotion-with-your-vite-react-project-7jl
+Documentation : 
+- npm create vite@latest
+- https://vitejs.dev/guide/
+- https://react.dev/
+- https://reactrouter.com/en/main
+- https://dev.to/glocore/configure-emotion-with-your-vite-react-project-7jl

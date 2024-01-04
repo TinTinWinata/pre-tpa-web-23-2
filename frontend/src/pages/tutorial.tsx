@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const PrimaryButton = styled.button`
   padding: 10px 30px;
@@ -24,14 +24,28 @@ const Text = styled.h1`
 
 export default function TutorialPage() {
   const [increment, setIncrement] = useState<number>(0);
+  const [text, setText] = useState<string>('');
   const handleClick = () => {
     setIncrement((prev) => prev + 1);
   };
-  console.log('Increment : ', increment);
+  const handleChange = () => {
+    setText((prev) => prev + '0');
+  };
+
+  useEffect(() => {
+    console.log('[DEBUG] Text : ', text);
+  }, [text]);
+
+  useEffect(() => {
+    console.log('Jalan setiap increment berubah');
+  }, [increment]);
+
   return (
     <div>
       <PrimaryButton onClick={handleClick}>Increment</PrimaryButton>
       <Text>{increment}</Text>
+      <PrimaryButton onClick={handleChange}>Change</PrimaryButton>
+      <Text>{text}</Text>
     </div>
   );
 }
